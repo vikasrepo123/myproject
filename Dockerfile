@@ -5,11 +5,11 @@ FROM alpine:latest
 RUN apk add --no-cache bash
 
 # Copy your script into the container
-COPY myscript.sh /app/myscript.sh
+COPY calculation.sh /app/calculation.sh
 
 # Make it executable
-RUN chmod +x /app/myscript.sh
+RUN chmod +x /app/calculation.sh
 
 # Run the script when the container starts
-CMD ["/app/myscript.sh"]
+CMD ["/app/calculation"]
 
